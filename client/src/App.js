@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
 
 class App extends Component {
   state = {
@@ -40,6 +43,9 @@ class App extends Component {
       <BrowserRouter>
       <div className="App">
         <Navbar />
+        <Route path='/' component={Home} />
+        <Route path='/' component={About} />
+        <Route path='/' component={Contact} />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
