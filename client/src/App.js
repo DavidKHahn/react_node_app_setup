@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
+import { BrowserRouter } from 'react-router-dom';
 
 class App extends Component {
   state = {
@@ -36,6 +37,7 @@ class App extends Component {
 
   render() {
     return (
+      <BrowserRouter>
       <div className="App">
         <Navbar />
         <header className="App-header">
@@ -66,6 +68,7 @@ class App extends Component {
         </form>
         <p>{this.state.responseToPost}</p>
       </div>
+      </BrowserRouter>
     );
   }
 }
