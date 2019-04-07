@@ -43,7 +43,7 @@ class App extends Component {
       <BrowserRouter>
       <div className="App">
         <Navbar />
-        <Route path='/' component={Home} />
+        <Route exact path='/' component={Home} />
         <Route path='/' component={About} />
         <Route path='/' component={Contact} />
         <header className="App-header">
